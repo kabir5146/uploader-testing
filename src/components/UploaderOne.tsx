@@ -29,9 +29,7 @@ const UploaderOne = () => {
       {!file && (
         <div className="h-80 w-[600px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-2xl shadow-purple-300 ">
           <div className="border-2 border-dashed border-purple-300 h-[200px] w-[540px] flex flex-col items-center justify-center rounded-2xl mb-5">
-            <i className="fa-solid fa-photo-film text-blue-600 border border-[#000000] px-1">
-              Icon
-            </i>
+            <i className="fa-solid fa-photo-film text-blue-600 text-4xl p-1"></i>
             <h1 className="font-bold text-xl leading-8">
               Drag & drop <span className="text-[#907CFF]">images</span> ,
             </h1>

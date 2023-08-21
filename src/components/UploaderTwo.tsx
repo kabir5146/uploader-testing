@@ -29,7 +29,7 @@ const UploaderTwo = () => {
       {!file && (
         <div className="h-[500px] w-[500px] bg-[#6060B9] flex flex-col items-center justify-center pt-5">
           <div className="w-[460px] h-[480px] rounded-2xl border-2 border-dashed border-white text-white flex flex-col items-center justify-center mb-5">
-            <i className="fa-solid fa-photo-film border px-1">Icon</i>
+            <i className="fa-solid fa-cloud-arrow-up text-5xl p-1"></i>
             <p className="font-medium text-xl leading-8 capitalize mt-3">
               Drag & drop to upload file
             </p>
