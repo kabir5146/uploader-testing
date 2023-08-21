@@ -63,7 +63,7 @@ const UploaderThree = () => {
             </div>
           </>
         )}
-        <div className="w-full flex flex-col justify-center items-center gap-5 mt-8">
+        <div className="w-full flex flex-col justify-center items-center gap-5 ">
           {file && (
             <>
               {" "}
