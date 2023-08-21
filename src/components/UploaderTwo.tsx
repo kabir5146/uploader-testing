@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { ChangeEvent, useRef, useState } from "react";
 
-const UploaderOne = () => {
+const UploaderTwo = () => {
   const [file, setFile] = useState<File[] | "">();
   console.log("🚀 ~ file: page.tsx:8 ~ Home ~ file:", file);
   const [editFileIndex, setEditFileIndex] = useState<number>(0);
@@ -27,51 +27,42 @@ const UploaderOne = () => {
         }}
       />
       {!file && (
-        <div className="h-80 w-[600px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-2xl shadow-purple-300 ">
-          <div className="border-2 border-dashed border-purple-300 h-[200px] w-[540px] flex flex-col items-center justify-center rounded-2xl mb-5">
-            <i className="fa-solid fa-photo-film text-blue-600 border border-[#000000] px-1">
-              Icon
-            </i>
-            <h1 className="font-bold text-xl leading-8">
-              Drag & drop <span className="text-[#907CFF]">images</span> ,
-            </h1>
-            <p className="font-bold text-xl leading-8">
-              <span className="text-[#907CFF]">video</span>, or any{" "}
-              <span className="text-[#907CFF]">file</span>
+        <div className="h-[500px] w-[500px] bg-[#6060B9] flex flex-col items-center justify-center pt-5">
+          <div className="w-[460px] h-[480px] rounded-2xl border-2 border-dashed border-white text-white flex flex-col items-center justify-center mb-5">
+            <i className="fa-solid fa-photo-film border px-1">Icon</i>
+            <p className="font-medium text-xl leading-8 capitalize mt-3">
+              Drag & drop to upload file
             </p>
-            <p className="text-base leading-6 mt-4">
-              or{" "}
-              <span className="text-[#907CFF] border-b-2 font-bold border-[#907CFF]">
-                browse files
-              </span>{" "}
+            <p className="font-medium text-xl leading-8 capitalize">
               on your computer
             </p>
-          </div>
-          <div className="relative px-10 py-2 bg-[#8978FF] rounded-full text-white">
-            <input
-              type="file"
-              multiple
-              name=""
-              id=""
-              className="h-full w-full opacity-0 absolute"
-              onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                const files = e.target.files;
-                if (files) {
-                  const fileArr = Object.values(files);
-                  // console.log(' Home ~ fileArr:', fileArr);
-                  if (fileArr.length <= 3) {
-                    setFile(fileArr);
-                  } else {
-                    let tempArr = [];
-                    for (let index = 0; index <= 3; index++) {
-                      tempArr.push(fileArr[index]);
+
+            <div className="relative px-10 py-2 bg-white rounded-lg text-[#6060B9] mt-5">
+              <input
+                type="file"
+                multiple
+                name=""
+                id=""
+                className="h-full w-full opacity-0 absolute"
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  const files = e.target.files;
+                  if (files) {
+                    const fileArr = Object.values(files);
+                    // console.log(' Home ~ fileArr:', fileArr);
+                    if (fileArr.length <= 3) {
+                      setFile(fileArr);
+                    } else {
+                      let tempArr = [];
+                      for (let index = 0; index <= 3; index++) {
+                        tempArr.push(fileArr[index]);
+                      }
+                      setFile(tempArr);
                     }
-                    setFile(tempArr);
                   }
-                }
-              }}
-            />
-            <p>Upload</p>
+                }}
+              />
+              <p>Upload</p>
+            </div>
           </div>
         </div>
       )}
@@ -141,4 +132,4 @@ const UploaderOne = () => {
   );
 };
 
-export default UploaderOne;
+export default UploaderTwo;
