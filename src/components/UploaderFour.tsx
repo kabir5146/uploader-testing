@@ -94,7 +94,11 @@ const UploaderFour = () => {
                   >
                     <i className="fa-solid fa-ellipsis-vertical"></i>
                   </button>
-                  <button className="absolute bottom-1 right-1 text-gray-500">
+                  <button
+                    type="button"
+                    onClick={() => {}}
+                    className="absolute bottom-1 right-1 text-gray-500 z-20"
+                  >
                     <i className="fa-solid fa-gear"></i>
                   </button>
                 </div>
