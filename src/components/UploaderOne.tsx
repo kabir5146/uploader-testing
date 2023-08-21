@@ -78,10 +78,7 @@ const UploaderOne = () => {
           <>
             {file.map((item: File, i: number) => {
               return (
-                <div
-                  key={i}
-                  className="w-60 h-60 border border-green-600 rounded bg-teal-300 relative  "
-                >
+                <div key={i} className="w-60 h-80 rounded bg-white relative  ">
                   <Image
                     src={URL.createObjectURL(item)}
                     alt=""
@@ -96,7 +93,7 @@ const UploaderOne = () => {
                       );
                       setFile(newFileArr);
                     }}
-                    className="absolute z-20 px-4 py-3 rounded-2xl bg-purple-200 text-black top-0 right-0 capitalize "
+                    className="absolute z-20 px-2 py-1 rounded-md bg-green-200 text-black top-2 right-2 capitalize "
                   >
                     {" "}
                     remove{" "}
@@ -107,7 +104,7 @@ const UploaderOne = () => {
                       setEditFileIndex(i);
                       editInputRef.current?.click();
                     }}
-                    className="absolute z-20 px-4 py-3 rounded-2xl bg-gray-200 text-black top-0 left-0 capitalize "
+                    className="absolute z-20 px-2 py-1 rounded-md bg-[#FE0A00] text-white top-2 left-2 capitalize "
                   >
                     {" "}
                     edit{" "}
@@ -115,7 +112,7 @@ const UploaderOne = () => {
                 </div>
               );
             })}
-            <div className="w-60 h-60 flex flex-col items-center justify-center shadow-lg shadow-purple-200 rounded bg-purple-50 relative  ">
+            <div className="w-60 h-80 flex flex-col items-center justify-center shadow-lg shadow-purple-200 rounded bg-purple-50 relative  ">
               <input
                 type="file"
                 multiple
