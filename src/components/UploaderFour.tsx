@@ -33,7 +33,7 @@ const UploaderFour = () => {
             multiple
             name=""
             id=""
-            className="h-full w-full opacity-0 absolute"
+            className="h-full w-full opacity-0 absolute cursor-pointer"
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
               const files = e.target.files;
               if (files) {
@@ -51,9 +51,9 @@ const UploaderFour = () => {
               }
             }}
           />
-          <i className="fa-solid fa-camera text-5xl text-gray-400"></i>
+          <i className="fa-solid fa-cloud-arrow-up text-5xl p-1 text-[#7F9AFB]"></i>
           <p className="px-3 text-center text-blue-500 mt-2">
-            Browse to find or drag image here
+            Browse File To Upload
           </p>
         </div>
       )}
@@ -100,7 +100,7 @@ const UploaderFour = () => {
               <input
                 type="file"
                 multiple
-                className="opacity-0 absolute w-full h-full z-10"
+                className="opacity-0 absolute w-full h-full z-10 cursor-pointer"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   const files = e.target.files;
                   if (files) {
@@ -114,9 +114,9 @@ const UploaderFour = () => {
                   }
                 }}
               />
-              <i className="fa-solid fa-camera text-5xl text-gray-400"></i>
+              <i className="fa-solid fa-cloud-arrow-up text-5xl p-1 text-[#7F9AFB]"></i>
               <p className="px-3 text-center text-blue-500 mt-2">
-                Browse to find or drag image here
+                Browse File To Upload
               </p>
             </div>
           </>

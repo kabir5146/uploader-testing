@@ -111,11 +111,11 @@ const UploaderOne = () => {
                 </div>
               );
             })}
-            <div className="w-60 h-80 flex flex-col items-center justify-center shadow-lg shadow-purple-200 rounded bg-purple-50 relative  ">
+            <div className="w-60 h-80  flex flex-col items-center justify-center border border-blue-600 rounded bg-white relative ">
               <input
                 type="file"
                 multiple
-                className="opacity-0 absolute w-full h-full z-10"
+                className="opacity-0 absolute w-full h-full z-10 cursor-pointer"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   const files = e.target.files;
                   if (files) {
@@ -129,6 +129,7 @@ const UploaderOne = () => {
                   }
                 }}
               />
+              <i className="fa-solid fa-cloud-arrow-up text-5xl p-1 text-[#7F9AFB]"></i>
               <h1 className="text-xl leading-8 font-bold">Upload More</h1>
             </div>
           </>
