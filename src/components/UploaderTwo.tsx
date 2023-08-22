@@ -108,7 +108,7 @@ const UploaderTwo = () => {
               <input
                 type="file"
                 multiple
-                className="opacity-0 absolute w-full h-full z-10 cursor-pointer"
+                className="opacity-0 absolute w-full h-full z-10"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   const files = e.target.files;
                   if (files) {

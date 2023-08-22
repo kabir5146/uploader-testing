@@ -42,7 +42,8 @@ const UploaderThree = () => {
                 multiple
                 name=""
                 id=""
-                className="h-full w-full opacity-0 absolute cursor-pointer"
+                className="h-full w-full opacity-0 absolute 
+                "
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   const files = e.target.files;
                   if (files) {
@@ -81,7 +82,8 @@ const UploaderThree = () => {
                     multiple
                     name=""
                     id=""
-                    className="h-full w-full opacity-0 absolute cursor-pointer"
+                    className="h-full w-full opacity-0 absolute 
+                    "
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       const files = e.target.files;
                       if (files) {
