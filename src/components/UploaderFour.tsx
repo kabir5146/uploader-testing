@@ -75,12 +75,11 @@ const UploaderFour = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      const newFileArr = file.filter(
-                        (element) => item.lastModified !== element.lastModified
-                      );
+                      const newFileArr = [...file];
+                      newFileArr.splice(i, 1);
                       setFile(newFileArr);
                     }}
-                    className="absolute z-20 left-1 bottom-1 text-gray-500"
+                    className="absolute z-20 left-2 top-2 text-[#FE0A00]"
                   >
                     <i className="fa-solid fa-trash"></i>
                   </button>
@@ -90,16 +89,9 @@ const UploaderFour = () => {
                       setEditFileIndex(i);
                       editInputRef.current?.click();
                     }}
-                    className="absolute z-20 left-1 top-1 text-gray-500"
+                    className="absolute z-20 right-2 top-2 text-gray-500"
                   >
                     <i className="fa-solid fa-ellipsis-vertical"></i>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {}}
-                    className="absolute bottom-1 right-1 text-gray-500 z-20"
-                  >
-                    <i className="fa-solid fa-gear"></i>
                   </button>
                 </div>
               );

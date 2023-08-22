@@ -81,12 +81,11 @@ const UploaderTwo = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      const newFileArr = file.filter(
-                        (element) => item.lastModified !== element.lastModified
-                      );
+                      const newFileArr = [...file];
+                      newFileArr.splice(i, 1);
                       setFile(newFileArr);
                     }}
-                    className="absolute z-20 px-2 py-1 rounded-md bg-green-200 text-black top-2 right-2 capitalize "
+                    className="absolute z-20 px-2 py-1 rounded-md bg-[#FE0A00] text-white top-2 left-2 capitalize "
                   >
                     {" "}
                     remove{" "}
@@ -97,7 +96,7 @@ const UploaderTwo = () => {
                       setEditFileIndex(i);
                       editInputRef.current?.click();
                     }}
-                    className="absolute z-20 px-2 py-1 rounded-md bg-[#FE0A00] text-white top-2 left-2 capitalize "
+                    className="absolute z-20 px-2 py-1 rounded-md bg-green-200 text-black top-2 right-2 capitalize "
                   >
                     {" "}
                     edit{" "}
